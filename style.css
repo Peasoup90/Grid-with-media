@@ -1,0 +1,84 @@
+
+body {
+    background-color: rgb(226, 236, 255);
+    margin: 0;
+    width: 100%;
+}
+
+header {
+background-color: rgb(174, 174, 174);
+height: 50px;
+}
+
+.wrapper {
+    margin: 20px;
+}
+
+h1 {
+    color: black;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lorems {
+display: grid;
+gap: 1em;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: minmax(200px,auto);
+}
+
+.lorems >.l1, aside {
+    background-color: white;
+    padding: 5px;
+}
+.lorems >.l2, aside {
+    background-color: white;
+    padding: 5px;
+}
+.lorems >.l3, aside {
+    background-color: white;
+    padding: 5px;
+    grid-column: 3/4;
+    grid-row: 1/4;
+}
+.lorems >.l4, aside {
+    background-color: white;
+    padding: 5px;
+}
+.lorems >.l5, aside {
+    background-color: white;
+    padding: 5px;
+}
+.lorems >.l6, aside {
+    background-color: white;
+    padding: 5px;
+    grid-column: 1/3;
+}
+
+footer {
+    background-color: rgb(174, 174, 174);
+    position:fixed;
+    text-align: center;
+
+    width: 100%;
+
+    padding: 10px;
+}
+
+@media screen and (max-width: 850px) {
+
+    .lorems {
+    grid-template-columns: repeat(3, 1fr);
+    }
+    .lorems > .l3 {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    .lorems > .l6 {
+        grid-column: 1/4;
+    }
+
+}
